@@ -25,12 +25,9 @@ import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Constants:
-    // TODO: Create the base URL
     private final String BASE_URL = "https://apiv2.bitcoinaverage" +
             ".com/indices/global/ticker/BTC";
 
-    // Member Variables:
     TextView mPriceTextView;
     Button mRefreshButton;
     String mSelectedCurrency;
@@ -88,14 +85,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                // called when response HTTP status is "200 OK"
+                // called when response HTTP status is "200"
                 Log.d("Bitcoin", "JSON: " + response.toString());
                 updateUI(response);
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
-                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+                // called when response HTTP status is "4XX"
                 Log.d("Bitcoin", "Request fail! Status code: " + statusCode);
                 Log.d("Bitcoin", "Fail response: " + response);
                 Log.e("ERROR", e.toString());
