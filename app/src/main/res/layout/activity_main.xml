@@ -11,6 +11,17 @@
     android:background="@color/bkgndColour"
     tools:context="com.londonappbrewery.bitcointicker.MainActivity">
 
+    <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp"
+        android:layout_marginStart="44dp"
+        android:text="@string/refresh_button_text"
+        android:background="@color/white"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
