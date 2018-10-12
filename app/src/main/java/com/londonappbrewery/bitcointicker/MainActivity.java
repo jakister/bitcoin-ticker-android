@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //format so that every string always has 2 fractional-numbers TODO
     private void updateUI(JSONObject response) {
         try {
             String newPrice = response.getString("last");
